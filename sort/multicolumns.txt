@@ -1,0 +1,12 @@
+Coffee|caffeine|morning
+Beach|sand|sun
+Book|reading|knowledge
+Mountain|hiking|freshair
+Music|melody|rhythm
+Camera|photography|memories
+Pizza|cheese|toppings
+Bicycle|exercise|transportation
+Smartphone|communication|apps
+Zebra|animal|black
+Arm|human|white
+Computer|linux|ubuntu

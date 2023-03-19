@@ -1,0 +1,10 @@
+Blue
+Green
+Indigo
+Magenta
+Orange
+Pink
+Red
+Turquoise
+Violet
+Yellow

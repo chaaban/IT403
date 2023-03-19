@@ -1,0 +1,8 @@
+Elephant
+Fox
+Giraffe
+Hippopotamus
+Iguana
+Jaguar
+Kangaroo
+Monkey

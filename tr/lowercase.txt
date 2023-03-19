@@ -1,0 +1,1 @@
+we want to translate all lowercase letters in input.txt to uppercase letters, and redirect the output to output.txt.

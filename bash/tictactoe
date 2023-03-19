@@ -1,0 +1,82 @@
+#!/bin/bash
+
+# Define the board
+board=(" " " " " " " " " " " " " " " " " ")
+
+# Draw the board
+draw_board() {
+    echo " ${board[0]} | ${board[1]} | ${board[2]} "
+    echo "---+---+---"
+    echo " ${board[3]} | ${board[4]} | ${board[5]} "
+    echo "---+---+---"
+    echo " ${board[6]} | ${board[7]} | ${board[8]} "
+}
+
+# Check if the game is over
+game_over() {
+    # Check rows
+    for i in {0..6..3}; do
+        if [[ "${board[$i]}" != " " && "${board[$i]}" == "${board[$i+1]}" && "${board[$i+1]}" == "${board[$i+2]}" ]]; then
+            echo "Game over! ${board[$i]} wins."
+            exit 0
+        fi
+    done
+
+    # Check columns
+    for i in {0..2}; do
+        if [[ "${board[$i]}" != " " && "${board[$i]}" == "${board[$i+3]}" && "${board[$i+3]}" == "${board[$i+6]}" ]]; then
+            echo "Game over! ${board[$i]} wins."
+            exit 0
+        fi
+    done
+
+    # Check diagonals
+    if [[ "${board[0]}" != " " && "${board[0]}" == "${board[4]}" && "${board[4]}" == "${board[8]}" ]]; then
+        echo "Game over! ${board[0]} wins."
+        exit 0
+    fi
+
+    if [[ "${board[2]}" != " " && "${board[2]}" == "${board[4]}" && "${board[4]}" == "${board[6]}" ]]; then
+        echo "Game over! ${board[2]} wins."
+        exit 0
+    fi
+
+    # Check if the board is full
+    if [[ ! " ${board[*]} " =~ " " ]]; then
+        echo "Game over! It's a tie."
+        exit 0
+    fi
+}
+
+# Main game loop
+while true; do
+    draw_board
+    echo "Enter row (1-3) and column (1-3) separated by a space (e.g. 2 3): "
+    read row col
+    index=$(( (row-1)*3 + col-1 ))
+
+    # Check if the selected cell is empty
+    if [[ "${board[$index]}" != " " ]]; then
+        echo "Cell is already occupied. Please choose another cell."
+        continue
+    fi
+
+    # Update the board with the player's move
+    board[$index]="X"
+
+    # Check if the game is over
+    game_over
+
+    # Generate the computer's move
+    while true; do
+        computer_move=$(( RANDOM % 9 ))
+        if [[ "${board[$computer_move]}" == " " ]]; then
+            board[$computer_move]="O"
+            break
+        fi
+    done
+
+    # Check if the game is over
+    game_over
+done
+

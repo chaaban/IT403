@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# Array of words
+words=("apple" "banana" "orange" "grape" "lemon" "peach" "pear" "pineapple" "kiwi" "strawberry")
+
+# Timer function
+function timer(){
+    for i in {5..1}; do
+        echo -ne "Starting in $i...\r"
+        sleep 1
+    done
+    echo -ne "Starting in 0...\r"
+}
+
+# Main game loop
+while true; do
+    # Display a random word
+    word=${words[$RANDOM % ${#words[@]}]}
+    echo "Type the word: $word"
+    
+    # Start the timer
+    timer &
+    
+    # Get the user's input
+    read input
+    
+    # Calculate the time taken
+    time_taken=$(ps -o etime= -p $!)
+    
+    # Check if the input is correct
+    if [ "$input" == "$word" ]; then
+        echo "You typed the word correctly in $time_taken seconds!"
+    else
+        echo "Sorry, incorrect. The word was $word."
+    fi
+    
+    # Ask if the user wants to play again
+    read -p "Do you want to play again? (y/n): " choice
+    if [ "$choice" == "n" ]; then
+        echo "Thanks for playing!"
+        exit 0
+    fi
+done
+

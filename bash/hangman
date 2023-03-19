@@ -1,0 +1,87 @@
+#!/bin/bash
+
+# Word list
+words=("apple" "banana" "cherry" "date" "elderberry" "fig" "grape" "honeydew" "kiwi" "lemon")
+
+# Select a random word
+#word=${words[$RANDOM % ${#words[@]}]}
+word=$(shuf -n 1 /usr/share/dict/words)
+
+echo word
+
+# Set up variables
+correct=()
+incorrect=()
+max_attempts=7
+attempt=0
+
+# Draw hangman
+draw() {
+    clear
+    echo "    _______"
+    echo "   |/      |"
+    echo "   |      ${1}"
+    echo "   |     ${2}${3}${4}"
+    echo "   |      ${5}"
+    echo "   |     ${6} ${7}"
+    echo "___|___"
+}
+
+# Display the word with underscores for unguessed letters
+display_word() {
+    for (( i=0; i<${#word}; i++ )); do
+        letter=${word:i:1}
+        if [[ ${correct[@]} =~ $letter ]]; then
+            echo -n "$letter "
+        else
+            echo -n "_ "
+        fi
+    done
+    echo
+}
+
+# Main game loop
+while true; do
+    # Draw the current state of the hangman
+    draw ${incorrect[0]:- } ${incorrect[1]:- } ${incorrect[2]:- } ${incorrect[3]:- } ${incorrect[4]:- } ${incorrect[5]:- } ${incorrect[6]:- }
+
+    # Display the word length and the current state of the word
+    echo "Word Length: ${#word}"
+    echo "Word: $(display_word)"
+
+    # Check if the game is over
+    if [[ $attempt -ge $max_attempts ]]; then
+        echo "You lose! The word was $word."
+        exit 0
+    elif [[ ! "$(display_word)" =~ "_" ]]; then
+        echo "You win! The word was $word."
+        exit 0
+    fi
+
+    # Ask the user to guess a letter
+    read -p "Guess a letter: " letter
+
+    # Validate input
+    if [[ -z $letter ]]; then
+        echo "Please enter a letter."
+        continue
+    elif [[ ! $letter =~ [a-zA-Z] ]]; then
+        echo "Please enter a letter from A to Z."
+        continue
+    fi
+
+    # Check if the letter has already been guessed
+    if [[ ${correct[@]} =~ $letter || ${incorrect[@]} =~ $letter ]]; then
+        echo "You've already guessed that letter!"
+    # Check if the letter is in the word
+    elif [[ $word =~ $letter ]]; then
+        echo "Correct!"
+        correct+=($letter)
+    # Otherwise, the letter is incorrect
+    else
+        echo "Incorrect!"
+        incorrect+=($letter)
+        ((attempt++))
+    fi
+done
+
