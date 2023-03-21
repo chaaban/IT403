@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Define a function that will run in the new thread
+thread_function() {
+    echo "****** This is the thread running in the background.**** BASH"
+    sleep 100
+}
+
+# Create a new thread using pthread_create
+gcc -pthread -o thread thread.c
+./thread &
+
+# Wait for a few seconds
+sleep 15
+
+# Terminate the thread using pkill
+sudo pkill thread
+

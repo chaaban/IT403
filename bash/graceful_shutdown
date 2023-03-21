@@ -1,0 +1,21 @@
+#!/bin/bash
+
+trap graceful_shutdown SIGINT SIGQUIT SIGTERM
+
+graceful_shutdown()
+{
+  echo -e "\nRemoving temporary file:" $temp_file
+  rm -rf "$temp_file"
+  exit
+}
+
+temp_file=$(mktemp -p /tmp tmp.XXXXXXXXXX)
+echo "Created temp file:" $temp_file
+
+counter=0
+
+while true
+do 
+  echo "Loop number:" $((++counter))
+  sleep 1
+done

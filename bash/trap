@@ -1,0 +1,14 @@
+#!/bin/bash
+
+trap "echo I was SIGINT terminated; exit" SIGINT
+trap "echo I was SIGQUIT terminated; exit" SIGQUIT
+trap "echo I was SIGTERM terminated; exit" SIGTERM
+
+echo $$
+counter=0
+
+while true
+do 
+  echo "Loop number:" $((++counter))
+  sleep 1
+done

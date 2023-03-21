@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Parent process ID: $$"
+
+echo "Making the child process..."
+sleep 2
+bash -c 'echo "Child process ID: $$"; sleep 10'
+echo "Parent process finished."
