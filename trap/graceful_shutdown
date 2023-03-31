@@ -9,8 +9,8 @@ graceful_shutdown()
   exit
 }
 
-temp_file=$(mktemp -p /tmp tmp.XXXXXXXXXX)
-echo "Created temp file:" $temp_file
+temp_file=$(mktemp -p /tmp IT403.XXXXXXXXXX)
+echo "I've just made a new temp file:" $temp_file
 
 counter=0
 
