@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+
+print "Enter the first number: ";
+chomp(my $num1 = <STDIN>);
+
+print "Enter the second number: ";
+chomp(my $num2 = <STDIN>);
+
+my $sum = $num1 + $num2;
+print "The sum of $num1 and $num2 is $sum\n";

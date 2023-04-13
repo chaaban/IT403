@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "Hello" #This is a comment
+
+sleep 1
+
+echo "hello"#This is comment #2
+
+#This is comment #3
+
+
+<<COMMENT
+Comment #4
+This is a multi line comments
+You can add some descriptions 
+about your script ... 
+COMMENT
+
+sleep 1
+
+echo "Bye!"

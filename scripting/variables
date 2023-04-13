@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+salutation=Hello
+echo $salutation    
+salutation=7+5 
+echo ${salutation}    
+salutation="my dear"
+echo "Hello $salutation"    
+
+
+
+

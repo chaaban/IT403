@@ -1,0 +1,12 @@
+#!/bin/bash
+
+### Turn on debug mode ###
+set –x
+
+# Run shell commands
+echo "Hello World"
+
+### Turn OFF debug mode ###
+set +x 
+# Add more commands without debug mode
+

@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+
+import time
+for i in "I'm", "N", "Ne", "Neo":
+    print(i, end='\r')
+    time.sleep(2)
+
+for i in "I'm", "N", "Ne", "Neo":
+    print(i, end='\n')
+    time.sleep(2)

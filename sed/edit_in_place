@@ -2,16 +2,16 @@ By default, sed outputs the edited text to standard output.
 However, we can use the -i option to edit files in place.
 For example, suppose we want to replace all occurrences of "IT403" with "IT4O3" in a file, and we want to edit the file in place.
 
-This is some text with the word "IT403" / "World" / "WoRld" .
+This is some text with the word "IT403" / "IT403" / "IT403" .
 
 Line 1 
 Line 2
 Line 3
 
-Hello World !
+Hello IT403 !
 Gunadyin!
 Bonjour !
 Saba7oooo !
 
 
-World ...
+IT403 ...
