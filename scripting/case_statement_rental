@@ -1,0 +1,23 @@
+#!/bin/bash
+# if no command line arg given then set rental to Unknown
+if [ -z $1 ]
+then
+	rental="*** Unknown vehicle ***"
+elif [ -n $1 ]
+then
+	rental=$1
+fi
+case $rental in
+   [cC][aA][rR]|van) 
+     echo "$rental rental is 20 \$ per km."
+    ;;
+   
+   "jeep") echo "$rental rental is 5 \$ per km."
+    ;;
+   
+   "bike") echo "$rental rental 2 \$ per km."
+   	;;
+   
+   *) echo "Sorry, I can not get a $rental rental  for you!"
+    ;;
+esac

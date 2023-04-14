@@ -1,0 +1,19 @@
+#!/bin/bash
+
+option="$1"
+
+case "$option" in
+    -f | --file)
+        echo "Processing file: $2"
+        ;;
+    -d | --directory)
+        echo "Listing directory: $2"
+        ;;
+    -h | --help)
+        echo "Usage: ./script.sh [-f FILE | -d DIRECTORY | -h]"
+        ;;
+    *)
+        echo "Invalid option. Use -h for help."
+        ;;
+esac
+

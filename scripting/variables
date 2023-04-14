@@ -6,8 +6,8 @@ echo $salutation
 salutation=7+5 
 echo ${salutation}    
 salutation="my dear"
-echo "Hello $salutation"    
-
+echo "Hello $salutation"
+exit 259
 
 
 
