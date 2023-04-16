@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#For Loop Using Command-line Arguments
+[ $# -eq 0 ] && { 
+ echo "Usage: $0 file1 file2 file…"; exit 1; 
+}
+
+for f in $*
+do
+   echo "< $f >"
+   if [ -f $f ]
+   then
+	cat $f
+    else
+	echo "$f not found."
+   fi
+done
+
