@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# read 2 nbs & assigned them to 3 vars
+read -p "Enter number one : " n1
+read -p "Enter number two : " n2
+read -p "Type your password : " -s n3
+
+# display back the 2 numbers / pass...
+echo "Number 1 : $n1"
+echo "Number 2 : $n2"
+echo "Password : $n3"
+
