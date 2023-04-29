@@ -7,7 +7,14 @@ salutation=7+5
 echo ${salutation}    
 salutation="my dear"
 echo "Hello $salutation"
-exit 259
 
 
+#salutation=10
+#echo $salutation
+
+
+
+#tarek=1+2
+#echo $tarek;
+#echo $((tarek));
 

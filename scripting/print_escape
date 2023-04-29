@@ -1,0 +1,37 @@
+#!/bin/bash
+
+printf "Escape Sequence Examples:\n"
+
+# Newline
+printf "1. Newline (\\\\n):\n"
+printf "Line 1\nLine 2\nLine 3\n\n"
+
+# Horizontal tab
+printf "2. Horizontal Tab (\\\\t):\n"
+printf "Column 1\tColumn 2\tColumn 3\n\n"
+
+# Backspace
+printf "3. Backspace (\\\\b):\n"
+printf "This text has a typo: Helllo\b\b\bo, World!\n\n"
+
+# Carriage return
+printf "4. Carriage Return (\\\\r):\n"
+printf "This line will be overwritten by the next line.\rOverwritten line.\n\n"
+
+# Form feed
+printf "5. Form Feed (\\\\f):\n"
+printf "This will cause a form feed (------------------------).\fContinued text.\n\n"
+
+# Vertical tab
+printf "6. Vertical Tab (\\\\v):\n"
+printf "Line 1\vLine 2\vLine 3\n\n"
+
+
+printf "\a"
+sleep 1;
+printf "\a"
+sleep 1;
+printf "\a"
+sleep 1;
+printf "\a"
+sleep 1;
