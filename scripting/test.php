@@ -3,6 +3,8 @@
 
 <?php
 
+
+// some php code ...
 phpinfo();
 
 ?>
