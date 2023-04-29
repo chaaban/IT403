@@ -3,6 +3,8 @@
 trap "echo I was SIGINT terminated; exit" SIGINT
 trap "echo I was SIGQUIT terminated; exit" SIGQUIT
 trap "echo I was SIGTERM terminated; exit" SIGTERM
+trap "echo I WAS SIGKILL terminated; exit" SIGKILL
+
 
 echo $$
 counter=0

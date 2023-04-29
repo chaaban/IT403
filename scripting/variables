@@ -14,7 +14,7 @@ echo "Hello $salutation"
 
 
 
-#tarek=1+2
-#echo $tarek;
-#echo $((tarek));
+tarek=1+2
+echo $tarek;
+echo $((tarek));
 
