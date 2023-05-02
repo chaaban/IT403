@@ -1,0 +1,10 @@
+#!/bin/bash
+
+let x="5&3"      # Bitwise AND
+let y="5|3"      # Bitwise OR
+let z="5^3"      # Bitwise XOR
+let w="~5"       # Bitwise NOT
+let v="5<<1"     # Left shift
+let u="5>>1"     # Right shift
+
+echo $x $y $z $w $v $u

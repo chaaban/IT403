@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "This is an example of using carriage return."
+
+for ((i=5; i>=0; i--)); do
+    printf "Countdown: %d\r" $i
+    sleep 1
+done
+
+echo ""
+echo "Countdown complete!"
