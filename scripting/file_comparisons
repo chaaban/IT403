@@ -47,17 +47,7 @@ then
   echo "file2.txt is executable"
 fi
 
-# Test if two files are the same
-if [ "file1.txt" -ef "file2.txt" ]
-then
-  echo "file1.txt and file2.txt are the same file"
-fi
 
-# Test if two files are different
-if [ "file1.txt" -nt "file2.txt" ]
-then
-  echo "file1.txt is newer than file2.txt"
-fi
 
 # Remove the test files
 rm file1.txt file2.txt file3.txt file4.txt
