@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Check if exactly 3 arguments are passed
+if [ "$#" -ne 3 ]; then
+    echo "Usage: $0 <number1> <number2> <number3>"
+    exit 1
+fi
+
+# Compare the first two numbers to find the maximum so far
+if [ $1 -gt $2 ]; then
+    max=$1
+else
+    max=$2
+fi
+
+# Compare the maximum so far with the third number
+if [ $max -lt $3 ]; then
+    max=$3
+fi
+
+echo $max
