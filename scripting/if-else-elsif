@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -f "/etc/passwd" ]; then
+    echo "File /etc/passwd exists"
+elif [ -d "/var/log" ]; then
+    echo "Directory /var/log exists"
+elif [ "$(whoami)" == "root" ]; then
+    echo "You are logged in as root"
+else
+    echo "None of the conditions were met"
+fi
