@@ -1,0 +1,29 @@
+#!/bin/bash
+
+
+#This is a test db so publishing the pass isnt a big issue ... play and learn
+
+DBNAME="zikr"
+USERNAME="dmsnqut8iyruihsqerr7"
+PASSWORD="pscale_pw_8PXy2rDEo5cUgSMjDcPYLIpq8wk74y6X1g4eRo7foJ4"
+HOST="aws.connect.psdb.cloud"
+
+
+LIMIT=10
+
+if [[ $# -eq 1 && $1 =~ ^[0-9]+$ ]]; then
+	LIMIT=$1
+else
+	LIMIT=10
+fi
+
+
+# Connect to the database and execute the query
+QUERY="SELECT * FROM daily LIMIT $LIMIT;"
+RESULT=$(mysql --user=$USERNAME --password=$PASSWORD --host=$HOST $DBNAME -e "$QUERY")
+
+# Print the result
+echo "$RESULT"
+
+
+

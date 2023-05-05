@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if mkdir temp_dir; then
+  echo "Directory created successfully."
+else
+  echo "Failed to create directory."
+fi

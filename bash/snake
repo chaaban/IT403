@@ -1,0 +1,93 @@
+#!/bin/bash
+
+# Set up the game board
+ROWS=10
+COLS=20
+BOARD_SIZE=$((ROWS * COLS))
+
+# Initialize game state
+snake=("9,10" "9,11" "9,12")
+food="5,10"
+snake_dir="left"
+
+# Helper function to print the game board
+print_board() {
+  clear
+  for ((i=0; i<$ROWS; i++)); do
+    for ((j=0; j<$COLS; j++)); do
+      cell="$i,$j"
+      if [[ "${snake[@]}" =~ "$cell" ]]; then
+        echo -n "X"
+      elif [[ "$food" == "$cell" ]]; then
+        echo -n "O"
+      else
+        echo -n "."
+      fi
+    done
+    echo
+  done
+}
+
+# Helper function to move the snake
+move_snake() {
+  head="${snake[0]}"
+  IFS=',' read -ra coords <<< "$head"
+  case "$snake_dir" in
+    "up")    coords[0]=$((coords[0] - 1)) ;;
+    "down")  coords[0]=$((coords[0] + 1)) ;;
+    "left")  coords[1]=$((coords[1] - 1)) ;;
+    "right") coords[1]=$((coords[1] + 1)) ;;
+  esac
+  new_head="${coords[0]},${coords[1]}"
+
+  # Collision detection
+  if [[ "${snake[@]}" =~ "$new_head" ]]; then
+    echo "Game Over!"
+    exit 1
+  fi
+
+  if [[ "$new_head" == "$food" ]]; then
+    food=""
+    while [[ -z "$food" ]] || [[ "${snake[@]}" =~ "$food" ]]; do
+      food="$((RANDOM % ROWS)),$((RANDOM % COLS))"
+    done
+  else
+    snake=( "${snake[@]:0:$(( ${#snake[@]} - 1 ))}" )
+  fi
+
+  snake=( "$new_head" "${snake[@]}" )
+}
+
+# Configure terminal settings
+stty_saved="$(stty -g)"
+stty -echo -icanon -icrnl time 0 min 0
+
+# Main game loop
+cleanup() {
+  stty "$stty_saved"
+  clear
+  exit 0
+}
+trap cleanup INT
+
+while true; do
+  print_board
+  IFS="," read -rsn1 key1
+  if [[ "$key1" == $'\x1b' ]]; then
+    read -rsn2 key2
+    if [[ "$key2" == "[" ]]; then
+      read -rsn1 key3
+      case "$key3" in
+        "A") snake_dir="up" ;;
+        "B") snake_dir="down" ;;
+        "C") snake_dir="right" ;;
+        "D") snake_dir="left" ;;
+      esac
+    fi
+  fi
+  move_snake
+  sleep 0.1
+done
+
+cleanup
+

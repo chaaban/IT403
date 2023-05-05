@@ -6,6 +6,6 @@ if [ "$num" -gt 1 -a "$num" -lt 10 ]
 then 
 echo "$num*$num=$(($num*$num))"
 else
-	echo "Wrong insertion !"
+	echo "Enter correct nbs!"
 fi
 

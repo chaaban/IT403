@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# File comparisons in Bash
+
+# Create some test files
+touch file1.txt
+touch file2.txt
+chmod +x file2.txt
+touch file3.txt
+chmod +w file3.txt
+touch file4.txt
+chmod +wx file4.txt
+
+# Test if a file exists
+if [ -e "file1.txt" ]
+then
+  echo "file1.txt exists"
+fi
+
+# Test if a file exists and is a regular file
+if [ -f "file1.txt" ]
+then
+  echo "file1.txt is a regular file"
+fi
+
+# Test if a file exists and is a directory
+if [ -d "file1.txt" ]
+then
+  echo "file1.txt is a directory"
+fi
+
+# Test if a file exists and is readable
+if [ -r "file1.txt" ]
+then
+  echo "file1.txt is readable"
+fi
+
+# Test if a file exists and is writable
+if [ -w "file3.txt" ]
+then
+  echo "file3.txt is writable"
+fi
+
+# Test if a file exists and is executable
+if [ -x "file2.txt" ]
+then
+  echo "file2.txt is executable"
+fi
+
+
+
+# Remove the test files
+rm file1.txt file2.txt file3.txt file4.txt
