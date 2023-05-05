@@ -1,0 +1,32 @@
+#!/bin/bash
+
+
+str=hello
+
+if test "$str" == "hello" -o "$str" == "world"
+then
+    echo "Match found"
+else
+    echo "No match found"
+fi
+
+
+
+str=it403
+
+if test "$str" == "hello" -o "$str" == "world"
+then
+    echo "Match found"
+else
+    echo "No match found"
+fi
+
+
+str=world
+
+if (( "$str" == "hello" ||  "$str" == "world" ))
+then
+    echo "Match found"
+else
+    echo "No match found"
+fi
