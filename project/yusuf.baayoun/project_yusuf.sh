@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set time interval to refresh every 5 seconds
-INTERVAL=5
+INTERVAL=1
 
 # Initialize total data usage to 0
 TOTAL_MB=0

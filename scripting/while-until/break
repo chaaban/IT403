@@ -1,0 +1,28 @@
+#!/bin/bash
+
+match=$1 # fileName
+found=0    # set to 1 if file found in the for loop
+
+if [ $# -eq 0 ] 
+then
+ echo "Usage: $0 fileName"; exit 1; 
+fi
+
+
+
+for f in /etc/*
+
+do
+	echo "Checking $f"
+
+	if [ $f = "/etc/$match" ]
+	then
+	       echo "/etc/$match file found!"
+               found=1  # file found
+               break    # break the for loop
+	fi
+done
+
+# file not found
+[ $found -ne 1 ] && echo "/etc/$match file not found in /etc directory"
+

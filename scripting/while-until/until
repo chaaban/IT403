@@ -1,0 +1,7 @@
+until [ -f file.txt ]
+do
+   sleep 1
+   echo "I'm Still waiting ..."
+done
+
+echo "File found!"

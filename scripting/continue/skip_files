@@ -1,0 +1,16 @@
+#!/bin/bash
+
+dir="."
+extension=".txt"
+
+for file in "$dir"/*
+do
+  if [[ ! -f "$file" || "$file" == *"$extension" ]]
+  then
+    continue	
+  fi
+
+
+  echo "Processiing $file ..."
+  # Do something else then ... 
+done
