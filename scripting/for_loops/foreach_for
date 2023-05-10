@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Define an array
+my_array=("apple" "banana" "orange")
+
+# Loop over the array using a for loop
+for item in "${my_array[@]}"
+do
+    echo $item
+done
+
+
+
+
+# v2
+
+# Define an array
+my_array=("apple" "banana" "orange")
+
+# Loop over the array using a for loop and a counter variable
+for (( i=0; i<${#my_array[@]}; i++ ))
+do
+    echo ${my_array[$i]}
+done
