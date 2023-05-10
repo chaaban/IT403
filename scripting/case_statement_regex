@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo -n  "Please enter a string: "
+read string
+
+case $string in
+  [0-9]*)
+    echo "The string starts with a digit."
+    ;;
+  [a-zA-Z]*)
+    echo "The string starts with a letter."
+    ;;
+  [[:punct:]]*)
+    echo "The string starts with a punctuation character."
+    ;;
+  *)
+    echo "The string is of an unknown type."
+    ;;
+esac
+

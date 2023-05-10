@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+
+call_me() {
+
+
+echo "First cmd"
+
+ls /aaaaa # generate some errors 
+
+
+echo "Thirs cmd"
+
+}
+
+
+
+call_me

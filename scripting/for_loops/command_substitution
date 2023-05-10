@@ -1,0 +1,15 @@
+#/bin/bash
+
+if [ $# -eq 0 ]; then
+  echo "Usage: $0 file1 file2 file..."
+  exit 1
+fi
+
+for f in "$@"; do
+  echo "< $f >"
+  if [ -f "$f" ]; then
+    cat "$f"
+  else
+    echo "$f not found."
+  fi
+done

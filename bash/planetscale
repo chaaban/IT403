@@ -4,9 +4,13 @@
 #This is a test db so publishing the pass isnt a big issue ... play and learn
 
 DBNAME="zikr"
-USERNAME="dmsnqut8iyruihsqerr7"
-PASSWORD="pscale_pw_8PXy2rDEo5cUgSMjDcPYLIpq8wk74y6X1g4eRo7foJ4"
+USERNAME="9fav2fbvbrp8qdr9woaj"
+PASSWORD="pscale_pw_tBFHoD94fpIVz2keArq7KjNEx5bY3Fxr3Mvrf3NJVnu"
 HOST="aws.connect.psdb.cloud"
+
+
+
+
 
 
 LIMIT=10

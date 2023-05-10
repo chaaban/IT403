@@ -1,0 +1,20 @@
+#!/bin/bash
+
+
+
+call_me() {
+
+
+echo "First cmd"
+
+
+
+echo "Thirs cmd"
+
+return 5
+
+}
+
+
+
+call_me

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+FILENAME=$1
+count=0
+
+while read LINE
+		do
+   	   		let count++
+   	   		echo "$count $LINE"
+		done < $FILENAME
+echo -e "\nTotal $count Lines read"
+
