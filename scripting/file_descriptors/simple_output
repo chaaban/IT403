@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+
+exec 3> output.txt
+
+
+echo "Hello, world!" >&3
+echo "Today is $(date)" >&3
+echo "Good morning" >&3
+
+
+exec 3>&-

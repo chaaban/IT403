@@ -1,0 +1,12 @@
+#!/bin/bash
+
+get_greeting() {
+    local name=$1
+    echo "Hello, $name!"
+}
+
+greeting=$(get_greeting "Tarek")
+
+
+
+echo $greeting
