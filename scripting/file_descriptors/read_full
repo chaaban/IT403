@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+#Using File Descriptors
+FILENAME=$1
+count=0
+
+exec 3<$FILENAME
+	while read LINE <&3
+	# while read –u 3 LINE
+	do
+	        let count++
+	        echo "$count $LINE"
+	done
+exec 3<&-
+echo -e "\n Total $count Lines read"
+

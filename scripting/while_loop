@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Initialize the counter variable
+count=1
+
+# Check if the count is less than or equal to 5
+while [ $count -le 5 ]; do
+    echo "Number: $count"
+    sleep 1; 
+    count=$((count + 1)) # Increment the counter
+done
+
+
