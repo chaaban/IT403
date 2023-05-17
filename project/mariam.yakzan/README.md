@@ -10,15 +10,15 @@ The Automated Backup Script is a bash script that automates the process of backi
 - Compress backup files into a single archive using zip, gzip, or lzma compression methods.
 - Verify the integrity of the backup archive.
 
-## Prerequisites
+### Prerequisites
 
 - Linux server with root privileges.
 - Bash shell.
 
-## Usage
+#### Usage
 
 1. Clone the repository or download the backup script to your Linux server.
 
 2. Make the script executable by running the following command:
 
-   sudo backup.sh zip or gzip or lzma
+  ` sudo backup.sh zip or gzip` or lzma
