@@ -54,6 +54,7 @@ m=$((count*100))
 accuracy=$((m/typed))
 
 #results presentation
+echo "speed: $typed words per minute"
+echo "accuracy: $accuracy%"
 echo -e "words provided: $numberOfWords\nwords typed: $typed\ncorrect words: $count"
-echo "your speed is $typed words per minute"
-echo "your accuracy is: $accuracy%"
+

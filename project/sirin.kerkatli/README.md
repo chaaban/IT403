@@ -4,7 +4,7 @@
 
 # Typing Speed Test
 
-This is a script that tells you your typing speed in words per minute (wpm).
+This is a script that calculates your typing speed in words per minute (wpm) as well as your typing accuracy.
 
 
 ## Usage
