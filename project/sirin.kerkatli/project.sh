@@ -49,7 +49,6 @@ end=$(date +%M:%S)
 echo $end
 
 #results calculation
-speed=$(((10#$typed*60)/10#$totalSeconds))
 m=$((count*100))
 accuracy=$((m/typed))
 
