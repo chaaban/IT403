@@ -25,18 +25,18 @@ do
 	line=$(shuf -n 1 $filname)
 	echo $line
 
-	#get the number of words provided
+	#number of words provided
 	let numberOfWords=numberOfWords+1
 	
 	read -t $((end_time - SECONDS)) -p "you: " word
 	if [ $? -eq 0 ]
 		then
-			#the number of words the user typed
+			#number of words the user typed
 			let typed=$typed+1
 		
 			if [ "$word" == $line ]
 				then
-					#how many correct words 
+					#number of correct words 
 					let count=$count+1
 				fi
 		else
