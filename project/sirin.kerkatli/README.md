@@ -16,7 +16,7 @@ will recieve.
 ```
 
 
-## Running The Test
+## Running The Script
 
 To run the script, download the files, then run the following commands
 
@@ -27,7 +27,7 @@ To run the script, download the files, then run the following commands
 ```
 
 
-## Authors
+## Author
 
 - [@SirinKerkatli](https://www.github.com/SirinKerkatli)
 
