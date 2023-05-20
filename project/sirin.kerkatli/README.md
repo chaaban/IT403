@@ -1,5 +1,5 @@
 
-![Logo](https://github.com/chaaban/IT403/blob/main/project/sirin.kerkatli/"Twitch Panel 3 - Made with PosterMyWall (1).jpg")
+![Logo](https://github.com/chaaban/IT403/blob/main/project/sirin.kerkatli/photo.jpg)
 
 
 # Typing Speed Test
