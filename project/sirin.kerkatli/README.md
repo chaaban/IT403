@@ -1,5 +1,5 @@
 
-![Logo]("Twitch Panel 3 - Made with PosterMyWall (1).jpg")
+![Logo](IT403/project/sirin.kerkatli/Twitch Panel 3 - Made with PosterMyWall (1).jpg")
 
 
 # Typing Speed Test
