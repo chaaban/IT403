@@ -10,16 +10,13 @@ This script is a script that tells you your typing speed in words per minute (wp
 ## Usage
 
 ```
-After running the script, press ENTER to start the counter. 
-You will be given words, one by one, and you will be asked 
-to type the words. The faster you type, the more words you will 
-recieve.
+After running the script, press ENTER to start the counter. You will be given words, one by one, and you will be asked to type the words. The faster you type, the more words you will recieve.
 ```
 
 
 ## Running The Test
 
-To run the script, download the files, then run the following command
+To run the script, download the files, then run the following commands
 
 ```bash
   chmod +x project.sh
