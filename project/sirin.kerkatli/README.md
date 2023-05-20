@@ -7,7 +7,7 @@
 This script is a script that tells you your typing speed in words per minute (wpm).
 
 
-## Usage/Examples
+## Usage
 
 ```
 After running the script, press ENTER to start the counter. 
@@ -17,7 +17,7 @@ recieve.
 ```
 
 
-## Running Tests
+## Running The Test
 
 To run the script, download the files, then run the following command
 
