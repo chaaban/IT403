@@ -10,7 +10,7 @@ echo $start
 startSeconds=$(echo $start | cut -d : -f2)
 startMinutes=$(echo $start | cut -d : -f1)
 
-end_time=$((SECONDS + 60))
+end_time=$((SECONDS + 10))
 
 while [ $SECONDS -lt $end_time ];
 do
@@ -20,7 +20,7 @@ do
 	echo $line
 
 	echo "Enter your input:"
-	read -t $end_time word
+	read -t $((end_time - SECONDS)) word
 	if [ $? -eq 0 ]
 		then
 		
