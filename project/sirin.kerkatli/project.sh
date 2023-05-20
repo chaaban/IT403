@@ -5,7 +5,7 @@ count=0
 numberOfWords=0
 typed=0
 
-#get the file that stores the word
+#get the file that stores the words
 filname=words
 
 #start the game
@@ -44,7 +44,7 @@ do
 		fi
 done
 	
-#end date
+#ending time
 end=$(date +%M:%S)
 echo $end
 
