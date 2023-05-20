@@ -29,5 +29,5 @@ To run the script, download the files, then run the following commands
 
 ## Author
 
-- [@SirinKerkatli](https://www.github.com/SirinKerkatli)
+[@SirinKerkatli](https://www.github.com/SirinKerkatli)
 
