@@ -1,6 +1,9 @@
 #!/bin/bash
 count=0
 numberOfWords=0
+typed=0
+
+filname=words
 
 read -p "Press Enter to Start: " start
 
@@ -10,19 +13,20 @@ echo $start
 startSeconds=$(echo $start | cut -d : -f2)
 startMinutes=$(echo $start | cut -d : -f1)
 
-end_time=$((SECONDS + 60))
+end_time=$((SECONDS + 10))
 
 while [ $SECONDS -lt $end_time ];
 do
 	let numberOfWords=numberOfWords+1
 	
-	line=$(shuf -n 1 /usr/share/dict/words)
+	line=$(shuf -n 1 $filname)
 	echo $line
 
 	echo "Enter your input:"
 	read -t $end_time word
 	if [ $? -eq 0 ]
 		then
+			let typed=$typed+1
 		
 			if [ "$word" == $line ]
 				then
@@ -60,8 +64,11 @@ echo "minutes: $finalMinutes"
 totalSeconds=$(((10#$finalMinutes*60)+10#$finalSeconds))
 echo "total seconds: $totalSeconds"
 
-echo "you typed $numberOfWords words, $count of them is correct, in $totalSeconds seconds"
+echo "you got $numberOfWords words, you typed $typed, $count of them are correct, it took you $totalSeconds seconds"
 
 speed=$(((10#$numberOfWords*60)/10#$totalSeconds))
+m=$((count*100))
+accuracy=$((m/typed))
 
 echo "your speed is $speed words per minute"
+echo "your accuracy is: $accuracy%"
