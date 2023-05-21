@@ -30,6 +30,6 @@ This script allows you to manage a team roster by adding, removing, and modifyin
 - Tarek
 - Mohammad
 - Abed
-- ali
-- hasan
+- Ali
+- Hasan
 - Ahmad
