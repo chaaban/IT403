@@ -1,0 +1,29 @@
+3 banana
+10 oranges
+2 apples
+a
+c
+e
+g
+i
+k
+m
+o
+q
+s
+u
+w
+y
+A
+C
+E
+G
+I
+K
+M
+O
+Q
+S
+U
+W
+Y

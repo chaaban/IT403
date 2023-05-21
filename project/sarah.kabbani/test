@@ -1,1 +1,80 @@
+#!/bin/bash
+
+echo "Enter the number of students:"
+read num_students
+
+declare -a student_names
+declare -A student_scores
+declare -a student_averages
+declare -a student_grades
+
+declare -a exam_totals
+declare -a exam_averages
+
+# Function to calculate letter grade based on the score
+calculate_grade() {
+  local score=$1
+  local grade=""
+
+  if ((score >= 90)); then
+    grade="A"
+  elif ((score >= 80)); then
+    grade="B"
+  elif ((score >= 70)); then
+    grade="C"
+  elif ((score >= 60)); then
+    grade="D"
+  else
+    grade="F"
+  fi
+
+  echo "$grade"
+}
+
+for ((i=1; i<=num_students; i++))
+do
+  echo "Enter the name of student $i:"
+  read name
+  student_names[$i]=$name
+
+  echo "Enter the scores for student $name:"
+
+  declare -a exam_scores
+  total_score=0
+
+  for ((j=1; j<=3; j++))
+  do
+    echo "Enter score for exam $j (out of 100):"
+    read score
+    exam_scores[$j]=$score
+    total_score=$((total_score + score))
+  done
+
+  student_scores[$i]=${exam_scores[*]}
+  student_averages[$i]=$((total_score / 3))
+  student_grades[$i]=$(calculate_grade ${student_averages[$i]})
+
+  echo "Student $name: Average = ${student_averages[$i]}, Grade = ${student_grades[$i]}"
+done
+
+# Calculate average for each exam
+for ((k=1; k<=3; k++))
+do
+  total_exam_score=0
+
+  for ((l=1; l<=num_students; l++))
+  do
+    exam_score=(${student_scores[$l]})
+    total_exam_score=$((total_exam_score + ${exam_score[$(($k-1))]}))
+  done
+
+  exam_totals[$k]=$total_exam_score
+  exam_averages[$k]=$((total_exam_score / num_students))
+done
+
+echo "Average for each exam:"
+for ((m=1; m<=3; m++))
+do
+  echo "Exam $m: ${exam_averages[$m]}"
+done
 
