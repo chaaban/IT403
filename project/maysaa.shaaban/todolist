@@ -1,0 +1,140 @@
+#!/bin/bash
+
+file="list.txt"
+
+# Function to display the todo list
+display_todolist() {
+    if [ -f "$file" ]; then
+        cat  "$file"
+    else
+        echo "No tasks in the todo list."
+    fi
+}
+
+# Function to add a task to the to-do list
+add_task() {
+    echo "$1" >> "$file"
+    echo "Task added."
+}
+
+edit_task() {
+# Check if the todo.txt file exists
+    if [ -f "$file" ]; then  
+        # Check if the task number is provided as the second argument                
+        if [ -z "$2" ]; then                      
+            echo "Please provide the task number to edit."
+            return                                 # If the task number is not provided, display an error message and return from the function
+        fi
+         # Assign the task number to the line_num variable
+        line_num=$2                            
+        # Check if the total number of lines in the todo.txt file is less than the provided task number
+        if [ $(wc -l < "$file") -lt "$line_num" ]; then   
+            echo "Invalid task number."
+            return                                 # If the task number is invalid, display an error message and return from the function
+        fi
+        #replace the content of the specified line number with the new task provided as the first argument
+        sed -i "${line_num}s/.*/$1/" "$todo_file"   
+        echo "Task edited."
+    else
+         # If the list.txt file does not exist, display an error message
+        echo "No tasks in the to-do list."        
+    fi
+}
+
+
+# Function to mark a task as done in the to-do list
+mark_as_done() {
+    if [ -f "$file" ]; then
+        if [ -z "$1" ]; then
+            echo "Please provide the task number to mark as done."
+            return
+        fi
+
+        line_num=$1
+
+        if [ $(wc -l < "$file") -lt "$line_num" ]; then
+            echo "Invalid task number."
+            return
+        fi
+
+        sed -i "${line_num}s/.*/[DONE] &/" "$todo_file"
+        echo "Task marked as done."
+    else
+        echo "No tasks in the to-do list."
+    fi
+}
+
+# Function to delete a task from the to-do list
+delete_task() {
+    if [ -f "$file" ]; then
+        if [ -z "$1" ]; then
+            echo "Please provide the task number to delete."
+            return
+        fi
+
+        line_num=$1
+
+        if [ $(wc -l < "$file") -lt "$line_num" ]; then
+            echo "Invalid task number."
+            return
+        fi
+
+        sed -i "${line_num}d" "$file"
+        echo "Task deleted."
+    else
+        echo "No tasks in the to-do list."
+    fi
+}
+
+# Main script
+
+echo "Welcome to the to-do list!"
+
+while true; do
+    echo "***********************************"
+    echo "1. Display to-do list"
+    echo "2. Add task"
+    echo "3. Edit task"
+    echo "4. Mark task as done"
+    echo "5. Delete task"
+    echo "6. Exit"
+    echo "************************************"
+    read -p "Enter your choice: " choice
+
+    case $choice in
+        1)
+            display_todolist
+            ;;
+        2)
+            read -p "Enter the task to add: " task
+            add_task "$task"
+            ;;
+        3)
+            display_todolist
+            read -p "Enter the task number to edit: " task_num
+            read -p "Enter the new task: " new_task
+            edit_task "$new_task" "$task_num"
+            ;;
+        4)
+            display_todolist
+            read -p "Enter the task number to mark as done: " task_num
+            mark_as_done "$task_num"
+            ;;
+        5)
+            display_todolist
+            read -p "Enter the task number to delete: " task_num
+            delete_task "$task_num"
+            ;;
+        6)
+            echo "Goodbye!"
+            exit 0
+            ;;
+        *)
+            echo "Invalid choice. Please try again."
+            ;;
+    esac
+done
+
+
+
+
