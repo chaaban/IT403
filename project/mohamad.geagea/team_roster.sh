@@ -1,6 +1,6 @@
 #!/bin/bash
 # Define an array of team members
-team=("Tarek" "Mohammad" "Bahaa" "yusuf" "Hadi" "Sarah")
+team=("Tarek" "Mohammad" "Abed" "Ali" "Hasan" "Ahmad")
 # Define an array of positions
 positions=("Forward" "Midfielder" "Defender" "Goalkeeper")
 # Define an associative array of player positions
