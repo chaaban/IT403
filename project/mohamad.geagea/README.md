@@ -29,7 +29,7 @@ This script allows you to manage a team roster by adding, removing, and modifyin
 
 - Tarek
 - Mohammad
-- Bahaa
-- Yusuf
-- Hadi
-- Sarah
+- Abed
+- ali
+- hasan
+- Ahmad
