@@ -16,7 +16,7 @@ add_task() {
     echo "$1" >> "$file"
     echo "Task added."
 }
-
+#from chat gbt
 edit_task() {
 # Check if the todo.txt file exists
     if [ -f "$file" ]; then  
