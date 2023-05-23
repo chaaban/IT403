@@ -9,8 +9,8 @@ Run the code using "bash +x website_availability.sh". Then the script should ask
 Comments are enough to explain the code, but still some details are needed for more clarification.
 
 ### **curl** Command Line
-In the curl command line is to make the request and retrieve the HTTP response code.
-- "-L": option is for redirection of response. Ot means that go to that redirected link again and test it.
+The curl command line is to make the request and retrieve the HTTP response code.
+- "-L": option is for redirection of response. It means that go to that redirected link again and test it.
 - "-s": to run in silent mode. Prevents error messages, for unnecessary output.
 - "-o /dev/null": redirects the output to null device. To only take the response code.
 - "-w %{http_code}": for getting only the response code, without the response content.
@@ -21,7 +21,7 @@ In the curl command line is to make the request and retrieve the HTTP response c
 + Redirection (not used as a case): I considered this section by adding the "-L" option in the curl command line. Where i go to the redirected link and get the response code. (300-399)
 
 ## Benefit
-The website availability monitor script is beneficial as it helps track and ensure the continuous accessibility of websites, improving user experience and identifying potential issues promptly. Also this code could be modified to test the availability every day using a while loop and a "sleep" section, with sending an email. Where I check my email at morning to see what's up as a server!
+The website availability monitor script is beneficial, as it helps track and ensure the continuous accessibility of websites, improving user experience and identifying potential issues promptly. Also this code could be modified to test the availability every day using a while loop and a "sleep" section, with sending an email. Where I check my email at morning to see what's up as a server!
 
 
 ## Resources
@@ -43,5 +43,5 @@ while true; do
 done
 
 ```
-I found this block of code on chatgpt. I test it first, then I started modifying until it meets my needs. The most line of code I benefit from is the line using **curl** command, where it was a good experience dealing with data exchange between a device and a server!
+I found this block of code on chatgpt. I tested it first, then I started modifying until it meets my needs. The most line of code I benefit from is the line using **curl** command, where it was a good experience dealing with data exchange between a device and a server!
 
