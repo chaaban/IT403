@@ -26,16 +26,26 @@ The "Misplaced" value indicates the number of digits that are correct but not in
 Keep guessing and using the feedback to improve your subsequent guesses.                     
 If you guess the code correctly within the given attempts, you win the game.                       
 If you exhaust all your attempts without guessing the code correctly, you lose the game.                     
-Example Output                                       
+Example Output:    
+----------------
+
 Welcome to Mastermind!                     
 Attempt 1 of 10:                            
 Enter your guess (4 digits from 1-6): 2451                             
-Correct: 1   Misplaced: 1                           
+Correct: 1   Misplaced: 1
+
+------------------------------------
+
 Attempt 2 of 10:                    
 Enter your guess (4 digits from 1-6): 3612                         
 Correct: 0   Misplaced: 3                          
-...                            
-Congratulations, you guessed the code!                          
+...
+
+------------------------------------
+
+Congratulations, you guessed the code!  
+
+------------------------------------
 
 # Customization                         
 You can modify the code_length variable in the script to change the length of the secret code.                                
