@@ -4,19 +4,19 @@ This Bash script enables you to manage a todo list through the command line. The
 
 # Functions:
 
-**display_todolist():**
+1) display_todolist():
 Displays the current todo list by reading and printing the contents of the `list.txt` file.
 
-**add_task():**
+2) add_task():
 Appends a new task provided as an argument to the end of the `list.txt` file.
 
-**edit_task():**
+3) edit_task():
 Modifies an existing task in the `list.txt` file. It accepts the new task and the task number to be edited as arguments. The function uses `sed` to replace the line containing the specified task number with the new task.
 
-**mark_as_done():**
+4) mark_as_done():
 Marks a task as done in the `list.txt` file. It accepts the task number as an argument and modifies the line by adding `[DONE]` before the task.
 
-**delete_task():**
+5) delete_task():
 Deletes a task from the `list.txt` file. It accepts the task number as an argument and removes the corresponding line from the file
 
 # Main Script:
