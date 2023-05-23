@@ -21,7 +21,7 @@ Calculate Students / Exam average Script is a bash script that automates the pro
 
 2. Make the script executable by running the following command:
 
- ./test
+ ./StudentsExamAverage
 
 ##### Took from internet
 
