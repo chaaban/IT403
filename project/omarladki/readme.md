@@ -25,7 +25,8 @@ The "Correct" value indicates the number of correctly placed digits.
 The "Misplaced" value indicates the number of digits that are correct but not in the right position.                   
 Keep guessing and using the feedback to improve your subsequent guesses.                     
 If you guess the code correctly within the given attempts, you win the game.                       
-If you exhaust all your attempts without guessing the code correctly, you lose the game.                     
+If you exhaust all your attempts without guessing the code correctly, you lose the game.    
+
 Example Output:    
 ----------------
 
