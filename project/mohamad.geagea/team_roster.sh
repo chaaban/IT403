@@ -132,5 +132,5 @@ while true; do
     echo
 done
 
-echo "Mohammad Wahib Geagea, May 22 14:28"
+echo "Frankly SPEAKING THE CODE IS BASICALLY TAKEN FROM INTERNET SOURCES AND MODIFIED BY MOHAMAD WAHIB GEAGEA"
 
