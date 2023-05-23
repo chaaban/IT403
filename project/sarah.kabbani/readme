@@ -1,24 +1,53 @@
-# Student Average
+# Calculate Students / Exam average
 
-This script allows you to see the average of each student , letter grade and finally it will print all the output in a file with the average of each exam
+Calculate Students / Exam average Script is a bash script that automates the process of calculating the average of each student with his letter grade and display the average of each exams , all the outputs will be saved on a file
 
-## Usage
+## Features
 
-1-Enter the number of your students
-2-Enter the name of each student and his grade on each exam (exam 1,2,3)
-3-This script print the result in a new file with the average of each exam
+- Enter the number of student in your class.
+- Enter the name of each student.
+- Display the average of each student with his letter grade.
+- Calculate the average of each exam.
+- Create a new file that contain the ouput of all this features
 
-## Requirements
+### Prerequisites
 
-- Bash shell
+- Linux server with root privileges.
+- Bash shell.
 
-## Script Features
+#### Usage
 
-- Enter number of students
-- Enter the name of each stident in class
-- Enter the student grade in the exams (exam 1 , exam 2 , exam 3)
-- Display the average and letter grade of each student
-- display the average of each exam
-- All the output will be display on a file
+1. Clone the repository or download the backup script to your Linux server.
+
+2. Make the script executable by running the following command:
+
+ ./test
+
+##### Took from internet
+
+-How to declare an array
+-How to store element on a array
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
