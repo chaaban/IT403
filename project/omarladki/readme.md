@@ -1,13 +1,13 @@
-Mastermind Game in Bash    
+# Mastermind Game in Bash    
 This is a simple implementation of the Mastermind game in Bash scripting.
 
-Game Description      
+# Game Description      
 In the Mastermind game, the player attempts to guess a secret code within a limited number of attempts. The code consists of four digits, and each digit can range from 1 to 6. After each guess, the player receives feedback indicating the number of correct and misplaced digits.
 
-Prerequisites       
+# Prerequisites       
 To run this game, you need to have a Bash environment set up on your machine.
 
-How to Run    
+# How to Run    
 Save the provided code in a file with a .sh extension (e.g., mastermind.sh).     
 Open a terminal or command prompt.     
 Navigate to the directory where the script is saved.      
@@ -15,7 +15,7 @@ Run the script by executing the following command:
 bash mastermind.sh      
 
 
-Gameplay Instructions       
+# Gameplay Instructions       
 When the game starts, you will be greeted with a welcome message.        
 A secret code consisting of four digits will be generated.        
 You need to guess the code within a limited number of attempts. The default is 10 attempts, but you can modify it in the script.        
@@ -37,8 +37,8 @@ Correct: 0   Misplaced: 3
 ...                            
 Congratulations, you guessed the code!                          
 
-Customization                         
+# Customization                         
 You can modify the code_length variable in the script to change the length of the secret code.                                
 You can adjust the max_attempts variable to set the maximum number of attempts allowed.                       
 
-Enjoy playing Mastermind in the Bash environment!
+*__Enjoy playing Mastermind in the Bash environment!__*
