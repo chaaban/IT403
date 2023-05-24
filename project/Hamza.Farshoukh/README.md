@@ -27,3 +27,6 @@ This script utilizes the [exchangerate-api.com](https://www.exchangerate-api.com
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+##source
+The source code is taken from CHATGPT
