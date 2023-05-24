@@ -3,6 +3,10 @@ This Bash script reads a text file and counts the occurrences of each word. It t
 
 ## Prerequisites
 To run this script, you need to have Bash installed on your system.
+make sure the script is executable , if its not then use this:
+```
+chmod +x word_frequency.sh
+```
 
 ## Usage
 ```
