@@ -59,4 +59,4 @@ while [[ $incorrect -lt $max_incorrect && ${#guessed[@]} -lt ${#word} ]]; do
     echo 
 done
 
-# Rest of script...
+# I took some parts from chatgpt and used online sources to make this code work
