@@ -1,4 +1,0 @@
-sudo grep '^username:' /etc/shadow | sed 's/^.*:\([^:]*\):.*$/\1/'
-
-export PASS=$password SALT='$y$j9T$F31F/jItUvvjOv6IBFNea/$'
-perl -e 'print crypt $password, $ENV{SALT}'

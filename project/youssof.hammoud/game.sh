@@ -1,5 +1,6 @@
 #!/bin/bash
 
+state=true
 declare -a board=("1" "2" "3" "4" "5" "6" "7" "8" "9")
 current_player="X"
 
@@ -28,7 +29,7 @@ function check_win() {
        [[ ${board[2]} == $player && ${board[4]} == $player && ${board[6]} == $player ]]
     then
         echo "Player $player wins!"
-        exit 0
+        state=false
     fi
 }
 
@@ -45,7 +46,7 @@ function check_tie() {
     if ((count == 9))
     then
         echo "It's a tie!"
-        exit 0
+        state=false
     fi
 }
 
@@ -75,7 +76,7 @@ function make_move() {
 }
 
 # Main game loop
-while true
+while $state
 do
     display_board
     read -p "Player $current_player, enter your move (1-9): " move

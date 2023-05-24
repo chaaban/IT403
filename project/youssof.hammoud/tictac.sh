@@ -30,7 +30,7 @@ authenticate() {
     chmod +x ./chkpasswd.sh
 
     if id $username >/dev/null 2>&1; then
-        if echo "$password" | sudo ./chkpasswd.sh $username - ; then
+        if echo "$password" | sudo ./chkpasswd.sh $username - >/dev/null 2>&1; then
             authenticated_users+=("$username")
             echo "User '$username' authenticated."
         else
@@ -44,6 +44,8 @@ authenticate() {
 # Function to start tic-tac-toe game
 start_tic_tac_toe() {
     echo "Starting Tic-Tac-Toe game..."
+    chmod +x ./game.sh
+    source ./game.sh
     # Add your game logic here
 }
 
