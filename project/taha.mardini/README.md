@@ -2,7 +2,7 @@
 
 This is an open-source File Management program developed as part of the IT-403 course at Global University during the Spring 2023 semester. The program, written in Bash scripting, provides a convenient way to perform various file operations such as viewing, creating, deleting, renaming, and searching files within a specific directory.
 
-## Program Options
+## Program Options 
 
 The File Management program offers the following six options:
 
