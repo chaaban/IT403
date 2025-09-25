@@ -104,7 +104,7 @@ print_hangman() {
 
 # Play the Hangman game
 playHangman() {
-    local word="nyctophilia"  # Change the word here
+    local word="chameleon"  # Change the word here
     local max_guesses=6
     local wrong_guesses=0
     local guessed_letters=""
